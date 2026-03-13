@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    padding: 10px;
+}
+.h1{
+    color : burlywood;
+    background-color: aliceblue;
+    margin: 0 auto;
+}
+h1 {
+    color : burlywood;
+    text-align: center;
+    background-color: aliceblue;
+}
+header {
+    background-color: lightsteelblue;
+}
+footer {
+    color: rgb(0, 0, 0);
+    background-color: lightsteelblue;
+    text-align: center;
+}
+.aboutme {
+    background-color: lightcyan;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.project {
+    background-color: lightyellow;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+.skills {
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+.contact {
+    background-color: lightpink;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+.sbs {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+@media (max-width:500px) {
+    .sbs {
+        flex-direction: column;
+    }
+    
+}
