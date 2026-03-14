@@ -118,6 +118,21 @@ const changeTitleBtn = document.getElementById("ChangeT").addEventListener("clic
 })
 
 
+//Event Bubbling & Capturing
+
+// Event Bubbling - When an event occurs on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors. This is called bubbling.
+//Event Capturing - When an event occurs on an element, it first runs the handlers on the ancestors from the root down to the target element. This is called capturing.
+
+// Example of Event Bubbling
+document.getElementById("title").addEventListener("click",()=>{
+    console.log("Title clicked");
+});
+//Example of Event Capturing
+document.getElementById("title").addEventListener("click",()=>{
+    console.log("Title clicked - Capturing");
+}, true);
+
+
 // Local Storage & Cookies
 
 
