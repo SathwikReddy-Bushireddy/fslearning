@@ -65,6 +65,23 @@ myPromise.then(result=>console.log(result))
 
 // Async - Await
 
+// Async Await is just a cleaner way to write a Promise.
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error))
+
+async function getData(){
+    const response = await fetch("https://jsonplaceholder..com/posts");
+    const data = await response.json();
+    console.log(data);
+}
+
+getData();
+
+
+
 // Error Handling
 
 //Fetch API
