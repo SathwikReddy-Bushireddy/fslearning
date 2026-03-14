@@ -133,7 +133,16 @@ document.getElementById("title").addEventListener("click",()=>{
 }, true);
 
 
-// Local Storage & Cookies
+//Local Storage & Cookies
+
+// Local Storage - Stored in browser as key-value pairs
+// cookies - temporary storage of data
+localStorage.setItem("name", "Sathwik");
+const name = localStorage.getItem("name");
+console.log(name);
+localStorage.removeItem("name");
+localStorage.clear();
+
 
 
 //callbackhell
