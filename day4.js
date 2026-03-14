@@ -76,3 +76,33 @@ const person2 = {
 //person2.greet(); // Output: undefined
 
 // In the above example, the arrow function does not have its own this context, so it inherits this from the enclosing scope, which is the global scope. Since there is no name property in the global scope, this.name evaluates to undefined.
+
+// Call Stack is a data structure that keeps track of the function calls in a program. It follows the Last In, First Out (LIFO) principle, meaning that the most recently called function is the first one to be executed. When a function is called, it is added to the top of the call stack, and when it returns, it is removed from the stack. This allows JavaScript to manage function execution and handle nested function calls effectively.
+
+// Event Loop is a mechanism that allows JavaScript to perform non-blocking 
+// operations by offloading tasks to the browser's event handling system. 
+// It continuously checks the call stack and the task queue. 
+// If the call stack is empty, it takes the first task from the task queue and 
+// pushes it onto the call stack for execution. 
+// This allows JavaScript to handle asynchronous operations, such as user interactions, network requests, and timers, without blocking the main thread of execution.
+
+console.log("Start");
+setTimeout(() => {
+    console.log("Inside setTimeout");
+}, 3000);
+console.log("End");
+
+//Callback 
+console.log("Start");
+for(let i=0; i<100000000000; i++){}
+console.log("End");
+
+
+function greet(name,callback){
+    console.log(`Hello, ${name}`);
+    callback();
+}
+function finished(){
+    console.log("Finished greeting");
+}
+greet("Sathwik",finished);
