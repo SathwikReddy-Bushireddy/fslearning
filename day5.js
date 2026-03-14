@@ -82,7 +82,20 @@ getData();
 
 
 
-// Error Handling
+//ErroHandling
+//Try & Catch
+
+async function getData(){
+    try {
+        const response = await fetch("https://jsonplaceholder.typicod.com/postss");
+        const data = await response.json();
+        console.log(data);
+    } catch (error) {
+        console.log("Error fetching data: ", error);
+    }
+}
+getData();
+
 
 //Fetch API
 
