@@ -45,8 +45,23 @@ setTimeout(() => {
 }   , 1000);
 
 
-// Promises
+// /Promises - Handling Asynchronous Operations
 
+//  represnts a value that will be available in the future, either resolved or rejected.
+
+// promises - 3 states - pending, resolved, rejected
+
+const myPromise = new Promise((resolve, reject) => {
+    const success = false;
+    if(success){
+        resolve("Promise resolved successfully!");
+    } else {
+        reject("Promise rejected!");
+    }   
+});
+
+// myPromise.then(result=>console.log(result))
+// .catch(error => console.log(error))
 
 // Async - Await
 
