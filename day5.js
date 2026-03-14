@@ -60,8 +60,8 @@ const myPromise = new Promise((resolve, reject) => {
     }   
 });
 
-// myPromise.then(result=>console.log(result))
-// .catch(error => console.log(error))
+myPromise.then(result=>console.log(result))
+.catch(error => console.log(error))
 
 // Async - Await
 
