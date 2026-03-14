@@ -27,3 +27,18 @@ function myFunc(){
     console.log(z);
 }
 console.log(z); // Output: 30
+
+// Closure is a feature in JavaScript where an inner function has access to the outer (enclosing) function's variables and parameters, even after the outer function has returned. This allows the inner function to "remember" the environment in which it was created, enabling powerful programming patterns such as data encapsulation and function factories.
+
+function outer(){
+    let count = 0;
+    function inner(){
+        count++;
+        console.log(count);
+    }
+    return inner;
+}
+const counter = outer();
+counter();
+counter();
+counter();
