@@ -98,6 +98,15 @@ getData();
 
 
 //Fetch API
+// 1.Fetch reques
+// 2.server response
+// 3.converting to JSON
+// 4. use data
+
+fetch("https://jsonplaceholder.typicode.com/posts")
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log("Error fetching data: ", error));
 
 // DOM
 
