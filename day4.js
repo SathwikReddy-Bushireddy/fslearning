@@ -42,3 +42,37 @@ const counter = outer();
 counter();
 counter();
 counter();
+
+//Hoisting is a JavaScript mechanism where variable and function declarations are moved to the top of their containing scope during the compilation phase. This means that you can use variables and functions before they are declared in the code. However, only the declarations are hoisted, not the initializations.
+
+function hoistingExample() {
+    console.log(hoistedVar);
+}
+hoistingExample(); // Output: undefined
+var hoistedVar = 10;
+hoistingExample();
+
+
+//var it is hoisting with undefined, let and const are not hoisted. They are in a "temporal dead zone" until they are declared, which means you cannot access them before their declaration without causing a ReferenceError.
+// This KeyWord refers to the context in which a function is executed. It can refer to different objects depending on how the function is called. In a regular function, this refers to the global object (window in browsers). In an object method, this refers to the object itself. In an arrow function, this refers to the enclosing lexical context.
+
+const person = {
+    name: 'Mani Krishna',
+    greet(){
+        console.log(`Hello, my name is ${this.name}`); // printf("%d",ans);
+    }
+}
+person.greet(); // Output: Hello, my name is Mani Krishna
+
+
+const person1 = {
+    name : "Sathwik",
+    greet : ()=> console.log(this.name)
+}
+const person2 = {
+    name : "Mani Krishna"
+}
+//person2.greet = person1.greet;
+//person2.greet(); // Output: undefined
+
+// In the above example, the arrow function does not have its own this context, so it inherits this from the enclosing scope, which is the global scope. Since there is no name property in the global scope, this.name evaluates to undefined.
