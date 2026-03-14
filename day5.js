@@ -205,6 +205,17 @@ getUser()
 .then(posts=>getComments(posts[0]))
 .then(comments=>console.log(comments))
 
+//callBack HELL -> Async/Await
+
+async function getUserData(){
+    const user = await getUser();
+    const posts = await getPosts(user.id);
+    const comments = await getComments(posts[0]);
+
+    console.log(comments);
+}
+
+getUserData();
 
 // callbacks H/W
 function checkProduct(callback){
