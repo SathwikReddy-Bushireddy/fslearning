@@ -108,7 +108,15 @@ fetch("https://jsonplaceholder.typicode.com/posts")
     .then(data => console.log(data))
     .catch(error => console.log("Error fetching data: ", error));
 
-// DOM
+// DOM - Document Object Model
+// It tells what happens to JS through HTML
+// introduces Interactions to HTML
+
+const title = document.getElementById("title");
+const changeTitleBtn = document.getElementById("ChangeT").addEventListener("click",()=>{
+    title.textContent = "Sathwik & Team"
+})
+
 
 // Local Storage & Cookies
 
