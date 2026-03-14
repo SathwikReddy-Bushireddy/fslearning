@@ -28,3 +28,32 @@ const per = {
 };
 per.age = 21;
 console.log(per.age); // This will print 21 because we can change the properties of a constant object, but we cannot reassign the object itself.
+
+//Functions
+function greet(name) {
+    console.log("Inside the greet function");
+    return "Hello, " + name + "!";
+}
+console.log(greet("Sathwik")); // This will print "Hello, Sathwik!"
+
+const mul = function(a,b) {
+    return a*b;
+} 
+const ad = function add(a,b){
+    return a+b;
+}
+console.log(ad(5,3)); // This will print 15
+console.log(ad(5,3)); // This will print 8  
+
+// Arrow function
+const sub = (a,b)=> {
+    return a-b;
+}
+
+const greet = (name)=>"Hello, " + name + "!";
+
+
+const div = (a,b)=> a/b;
+
+const sq = x => x*x;
+const shr = ()=> console.log("Hello from arrow function with no parameters");
