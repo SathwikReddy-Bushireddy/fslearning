@@ -1,17 +1,48 @@
 // callbacks, promises, async-await, setTimeout, ErrorHandling, 
 // Fetch API, DOM,  Local Storage, Event Bubbling & Capturing
 
-//callBacks
+// Callbacks
+
+function greet(name, callback){
+    console.log("Hello " + name);
+    callback();
+}
+
+greet("Sathwik",()=>{
+    console.log("Welcome to JavaScript!");
+})
+
+// // Async callback
+
+// // Introducing setTimeout
+
+console.log("Start");
+setTimeout(()=>{
+    console.log("Inside setTimeout block");
+}, 2000);
+console.log("End");
+
+// Callback with Array Functions
+
+const numbers = [1, 2, 3, 4, 5];
+numbers.map(function(num){
+    return num * 2;
+});
+
+const sqnum = numbers.map(num => num * num);
 
 
+// Callback HELL 
 
-// Async CallBack
-
-
-// CallBack with Array Function
-
-
-// CallBack HELL
+setTimeout(() => {
+    console.log("First callback");
+    setTimeout(() => {
+        console.log("Second callback");
+        setTimeout(() => {
+            console.log("Third callback");
+        }, 1000);
+    }, 1000);
+}   , 1000);
 
 
 // Promises
